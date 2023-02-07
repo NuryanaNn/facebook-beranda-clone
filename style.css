@@ -1,0 +1,660 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navbar img{
+    width: 50px;
+}
+
+body{
+    background-color: #f0f2f5;
+    height: 10000px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.navbar{
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 1%;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+.navbar .logo{
+    display: flex;
+    align-items: center;
+}
+
+.navbar .logo img{
+    margin-right: 15px;
+}
+
+.navbar .logo .input-bx{
+    position: relative;
+}
+
+.navbar .logo .input-bx i{
+    position: absolute;
+    left: 15px;
+    top: 14px;
+    color: #65676b;
+}
+
+.navbar .logo input{
+    padding: 15px 40px 15px 40px;
+    border-radius: 30px;
+    border: none;
+    background-color: #f0f2f5;
+    outline: none;
+}
+
+.navbar ul{
+    display: flex;
+    align-items: center;
+}
+
+.navbar ul li{
+    list-style: none;
+    padding: 15px 60px;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+}
+
+.navbar ul li:hover{
+    background-color: #F2F2F2;
+}
+
+.navbar ul li a.active:before{
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    background-color: #1b74e4;
+    width: 100%;
+    height: 2px;
+    left: 0;
+    z-index: 1000;
+}
+
+.navbar ul li a.active{
+    color: #1b74e4;
+}
+
+.navbar a{
+    color: #65676b;
+}
+
+.navbar ul li i{
+    font-size: 20px;
+}
+
+.navbar .navigation2 ul li{
+    margin-right: 15px;
+    padding: 10px 13px;
+    border-radius: 50%;
+    background-color: #f0f2f5;
+}
+
+.navbar .navigation2 ul li:nth-child(4){
+    background-color: transparent;
+}
+
+.navbar .navigation2 img{
+    border-radius: 50%;
+    width: 40px;
+}
+
+.navbar .navigation2 ul li ion-icon{
+    color: black;
+    font-size: 20px;
+}
+
+/* Main Content */
+.content{
+    padding: 5rem 0;
+    width: 100%;
+}
+
+.sidebar{
+    width: 30%;
+    padding: 20px;
+    height: 100%;
+    position: fixed;
+    overflow: visible;
+}
+
+.sidebar:hover{
+    overflow-y: auto;
+}
+
+::-webkit-scrollbar{
+    width: 6px;
+}
+
+
+::-webkit-scrollbar-thumb{
+    background: gray; 
+    border-radius: 10px;
+    height: 20px;
+}
+
+.content .sidebar img{
+    width: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.content .sidebar li{
+    display: flex;
+    align-items: center;
+    margin-bottom: 7px;
+    padding: 10px 20px;
+    z-index: 99;
+    cursor: pointer;
+}
+
+.content .sidebar li:hover{
+    background-color: #E4E6E9;
+    border-radius: 5px;
+}
+
+.content .sidebar ion-icon{
+    font-size: 23px;
+    margin-right: 20px;
+    z-index: 99;
+    position: relative;
+    
+}
+
+.content  a{
+    text-decoration: none;
+    color: #000;
+}
+
+/* MainContent */
+.mainContent{
+    margin-left: 30%;
+    width: 40%;
+    padding: 20px 2%;
+}
+
+.mainContent .statusSection{
+    background-color: #fff;
+    padding: 5px 10px 20px 10px;
+    border-radius: 10px;
+}
+
+.mainContent .statusTitle{
+    display: flex;
+    justify-content: space-between;
+}
+
+.mainContent .statusTitle .status,
+.mainContent .statusTitle .reels{
+    display: flex;
+    align-items: center;
+    padding: 10px 70px;
+    cursor: pointer;
+    position: relative;
+    cursor: pointer;
+}
+
+.mainContent .statusTitle .status:hover,
+.mainContent .statusTitle .reels:hover{
+    background-color: #F2F2F2;
+}
+
+.mainContent .statusTitle ion-icon{
+    margin-right: 10px;
+    font-size: 30px;
+    color: #65676b;
+}
+
+.mainContent .statusTitle h3{
+    font-size: 15px;
+    color: #65676b;
+    font-weight: 500;
+}
+
+
+.mainContent .statusTitle .status.active ion-icon,
+.mainContent .statusTitle .status.active h3{
+    color: #1b74e4;
+}
+
+.mainContent .statusTitle .status::before{
+    content: '';
+    background-color: #1b74e4;
+    width: 100%;
+    height: 3px;
+    position: absolute;
+    bottom: -7px;
+    left: 0;
+}
+
+.mainContent .statusReels{
+    margin-top: 20px;
+}
+
+.mainContent .statusReels .card{
+    overflow: hidden;
+    border-radius: 10px;
+    width: 120px;
+    height: 200px;
+    text-align: center;
+    border: 1px solid #e4e6eb;
+    cursor: pointer;
+    position: relative;
+}
+
+.mainContent .statusReels .card .thumbUser{
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    width: 40px;
+    height: 40px;
+    z-index: 100;
+    border: 3px solid #1b74e4;
+    border-radius: 50%;
+    overflow: hidden;
+
+}
+.mainContent .statusReels .card .thumbUser img{
+    width: 100%;
+    height: 100%;
+}
+
+.mainContent .statusReels .card .overlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    top: 0;
+    left: 0;
+}
+
+.mainContent .statusReels .card:hover img{
+    transition: .5s;
+    transform: scale(1.02);
+}
+
+.mainContent .statusReels .card:first-child .images{
+    height: 75%;
+    width: 100%;
+    object-fit: contain;
+    position: relative;
+}
+
+.mainContent .statusReels .images{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.addImg{
+    position: absolute;
+    bottom: -20px;
+    left: 35%;
+    background-color: #1b74e4;
+    padding: 5px 8px;
+    border-radius: 50%;
+    color: #fff;
+    border: 5px solid #fff;
+}
+
+.mainContent .statusReels .images img{
+    width: 100%;
+    height: 100%;
+}
+
+.mainContent .statusReels .card h3{
+    margin-top: 20px;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.user{
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+}
+
+.user h4{
+    color: #fff;
+}
+
+
+/* Story */
+.story{
+    margin-top: 15px;
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.firstStory{
+    display: flex;
+    border-bottom: .5px solid #e4e6eb;
+    padding-bottom: 20px;
+}
+
+.firstStory .img-bx{
+    width: 45px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 10px;
+}
+
+.firstStory img{
+    width: 100%;
+    height: 100%;
+}
+
+.firstStory input{
+    width: 100%;
+    border-radius: 30px;
+    outline: none;
+    border: 1px solid #e4e6eb;
+    padding-left: 10px;
+    background: #f0f2f5;
+}
+
+.uploadStory{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+    color: #65676b;
+    font-weight: 500;
+}
+
+.uploadStory .camera, .uploadStory .images{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.uploadStory .camera:hover, .uploadStory .images:hover{
+    background-color: #e4e6eb;
+}
+
+
+.uploadStory ion-icon{
+    margin-right: 15px;
+    font-size: 30px;
+}
+
+.uploadStory .camera ion-icon{
+    color: red;
+}
+
+.uploadStory .images ion-icon{
+    color: green;
+}
+
+/* Status user */
+.statusUser{
+    margin-top: 20px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.statusUser .imgBx{
+    width: 30px;
+    height: 30px;
+    overflow: hidden;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.statusUser .userAccount{
+    display: flex;
+    justify-content: space-between;
+}
+
+.statusUser .userAccount .sect2 ion-icon{
+    font-size: 25px;
+}
+
+.statusUser .userAccount .sect2 li{
+    margin-right: 15px;
+}
+
+.statusUser .userAccount{
+    color: #65676b;
+}
+
+.statusUser .userAccount ul{
+    display: flex;
+    align-items: center;
+    align-items: center;
+}
+
+.statusUser .userAccount ul li:nth-child(2) a{
+    font-weight: 600;
+}
+
+.statusUser .userAccount ul li:nth-child(2) p{
+    margin-top: 5px;
+}
+
+.statusUser .userAccount p{
+    font-size: 10px;
+}
+
+.statusUser .userAccount ion-icon{
+    margin-right: 5px;
+}
+
+.statusUser ul{
+    list-style: none;
+}
+
+.statusUser img{
+    width: 100%;
+    height: 100%;
+}
+
+.statusUser .post{
+    margin-top: 20px;
+}
+
+.statusUser .post .images{
+    margin-top: 20px;
+}
+
+.post .likesAndComment {
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 0;
+    position: relative;
+}
+
+.post .likesAndComment::before{
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #e4e6eb;
+}
+
+.post .likesAndComment .like, .post .likesAndComment .comment{
+    display: flex;
+}
+
+.post .likesAndComment .like i, .post .likesAndComment .comment ion-icon{
+    margin-right: 8px;
+    color: #1b74e4;
+}
+
+.post .likeCommentSend{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    position: relative;
+}
+
+.post .likeCommentSend:before{
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #E4E6E9;
+}
+
+.post .likeCommentSend ul{
+    display: flex;
+    align-items: center;
+}
+
+.post .likeCommentSend ul li{
+    cursor: pointer;
+}
+
+.post .likeCommentSend ion-icon{
+    margin-right: 10px;
+    font-size: 20px;
+}
+
+.userComment{
+    margin-top: 20px;
+    display: flex;
+}
+
+.userComment input{
+    width: 100%;
+    padding: 10px;
+    border-radius: 20px;
+    outline: none;
+    border: none;
+    background-color: #E4E6E9;
+}
+
+.friendsSection{
+    background-color: #fff;
+    margin-top: 20px;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.friendsSection .title{
+    display: flex;
+    justify-content: space-between;
+}
+
+.friendsSection .title p{
+    color: #65676b;
+}
+
+.friendsContent .friendsWrapper{
+    margin-top: 20px;
+}
+
+.friendsContent .card{
+    width: 180px;
+    height: 270px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.friendsContent .card .images{
+    width: 100%;
+    height: 60%;
+}
+
+.friendsContent .card .images img{
+    width: 100%;
+    height: 100%;
+}
+
+.friendsContent .card .teks p{
+    font-weight: 500;
+    margin-top: 10px;
+}
+
+.friendsContent .card button{
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    background-color: #e7f3ff;
+    border: none;
+    color: #1e7af2;
+    border-radius: 10px;
+}
+
+/* RightSide */
+.rightSide{
+    position: fixed;
+    right: 0;
+    top: 0;
+    padding-top: 7%;
+    width: 30%;
+    padding-left: 6%;
+    height: 100%;
+}
+
+.rightSide .title{
+    display: flex;
+    justify-content: space-between;
+}
+
+.rightSide .title ul{
+    display: flex;
+    list-style: none;
+}
+
+.rightSide .title ul li{
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.rightSideContent{
+    margin-top: 20px;
+}
+
+.rightSideContent .users{
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.rightSideContent img{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.rightSide:hover{
+    overflow-y: auto;
+}
+
+::-webkit-scrollbar{
+    width: 6px;
+}
+
+
+::-webkit-scrollbar-thumb{
+    background: gray; 
+    border-radius: 10px;
+    height: 20px;
+}
+
+
+
+
